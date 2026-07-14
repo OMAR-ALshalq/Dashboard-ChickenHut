@@ -1,4 +1,6 @@
-.fruit-background {
+
+
+ .chicken-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,35 +8,39 @@
   height: 100%;
   overflow: hidden;
   z-index: 0;
-  pointer-events: none; /* لا تؤثر على النقر */
+  pointer-events: none; /* تضمن إمكانية النقر على أي شيء خلف الخلفية */
+  background-color: var(--bg-secondary); /* استخدام اللون الكريمي الدافئ كخلفية أساسية مريحة للعين */
 }
 
-.fruit {
+.chicken-item {
   position: absolute;
-  opacity: 0.15;
-  animation: float 10s ease-in-out infinite;
+  opacity: 0.08; /* خفضنا الشفافية قليلاً لتكون مريحة جداً كخلفية للوحة التحكم (الداشبورد) ولا تطغى على البيانات */
+  animation: float-chicken 12s ease-in-out infinite;
+  transition: opacity 0.3s ease;
 }
 
-/* حركة عامة لجميع الفواكه */
-@keyframes float {
+/* تحريك العناصر بلطف صعوداً وهبوطاً مع تدوير خفيف لإعطاء لمسة حيوية ممتازة */
+@keyframes float-chicken {
   0% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg) scale(1);
   }
   50% {
-    transform: translateY(-30px) rotate(10deg);
+    transform: translateY(-35px) rotate(15deg) scale(1.05);
   }
   100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg) scale(1);
   }
 }
 
-/* تخصيص بسيط لبعض الأنواع */
-.fruit-apple {
-  opacity: 0.2;
+/* تحكم مخصص في درجات شفافية العناصر لتنويع مظهر الخلفية */
+.item-drumstick {
+  opacity: 0.1;
 }
-.fruit-orange {
-  opacity: 0.18;
+
+.item-fries {
+  opacity: 0.08;
 }
-.fruit-lemon {
-  opacity: 0.22;
+
+.item-bucket {
+  opacity: 0.09;
 }

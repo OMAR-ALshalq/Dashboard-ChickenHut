@@ -8,6 +8,7 @@
 }
 
 .box-Main-Login form {
+  position: fixed;
   width: 300px;
   /*background: red;*/
   height: auto;
