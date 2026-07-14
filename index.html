@@ -1,8 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- PWA Manifest -->
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#2e7d32" />
+
+<!-- تسجيل Service Worker -->
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then((reg) => console.log("Service Worker مسجل بنجاح", reg.scope))
+        .catch((err) => console.log("فشل تسجيل Service Worker", err));
+    });
+  }
+</script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/Logo.jpg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"

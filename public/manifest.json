@@ -1,0 +1,24 @@
+{
+  "name": "ChickenHut - لوحة التحكم",
+  "short_name": "ChickenHut Admin",
+  "description": "لوحة تحكم مطعم ChickenHut لإدارة المنتجات والتصنيفات",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2e7d32",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/Logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
